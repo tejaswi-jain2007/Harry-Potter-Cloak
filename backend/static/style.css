@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Mystery+Quest&display=swap');
+
+body.gryffindor { background: radial-gradient(circle, #c11a1a 0%, #e9a76d 80%, #2e0505 100%); }
+body.hufflepuff { background: radial-gradient(circle, #f0c75e 0%, #222 80%, #4c3725 100%); }
+body.ravenclaw  { background: radial-gradient(circle, #273968 0%, #a2bce2 80%, #161c2d 100%); }
+body.slytherin  { background: radial-gradient(circle, #24561a 0%, #abcabc 80%, #1f4037 100%); }
+
+body {
+  font-family: 'Bigelow Rules', cursive;
+  color: #ffdb58;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s;
+}
+
+.container {
+  max-width: 740px;
+  margin: 40px auto;
+  padding: 28px 32px;
+  background: rgba(255, 248, 220, 0.94);
+  border: 8px solid #d5b25c;
+  border-radius: 22px;
+  box-shadow: 0 0 40px 18px #684008, 0 0 12px 4px #ffdb58 inset;
+  position: relative;
+}
+
+/* Magical parchment effect */
+.parchment-border {
+  border-width: 18px;
+  background: #faf3e3;
+  box-shadow: 0 0 60px 20px #e9a76d;
+}
+
+header h1 {
+  font-family: 'Mystery Quest', cursive;
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+  color: #c11a1a;
+  text-shadow: 0 0 8px #ffdb58, 0 0 16px #c11a1a;
+  margin-bottom: 20px;
+}
+
+#videoContainer {
+  border: 3px solid #d5b25c;
+  background: #f1d3b1;
+  border-radius: 14px;
+  box-shadow: 0 0 20px #e9a76d;
+  overflow: hidden;
+  margin: 0 auto 18px auto;
+}
+
+#videoFeed {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  background: #f1d3b1;
+  filter: saturate(1.2) contrast(1.1);
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 1.1rem;
+  margin-top: 12px;
+}
+
+button {
+  font-family: 'Bigelow Rules', cursive;
+  font-size: 1.12rem;
+  background: linear-gradient(90deg,#e9a76d 60%,#c11a1a 100%);
+  color: #2e0505;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 22px;
+  box-shadow: 0 0 15px #ffdb58;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+button:disabled {
+  background: #b79040;
+  color: #fff;
+  box-shadow: none;
+}
+button:hover:not(:disabled) {
+  background: linear-gradient(90deg,#c11a1a 0%,#e9a76d 100%);
+  box-shadow: 0 0 22px #ccc;
+}
+
+input[type="range"] {
+  accent-color: #c11a1a;
+  width: 130px;
+}
+
+#houseSelector {
+  font-family: 'Bigelow Rules', cursive;
+  font-size: 1.05rem;
+  padding: 6px 15px;
+  border-radius: 8px;
+  border: 2px solid #c11a1a;
+  background: #e9a76d;
+  color: #2e0505;
+  margin-left: 7px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 26px;
+  font-size: 1.14rem;
+  color: #c11a1a;
+  font-family: 'Bigelow Rules', cursive;
+  text-shadow: 0 0 6px #ffdb58;
+}
+
+#sparkle {
+  position: fixed;
+  pointer-events: none;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: url('https://media.giphy.com/media/3oEjI5VtIhHvK37WYo/giphy.gif') center center no-repeat;
+  background-size: cover;
+  display: none;
+  z-index: 999;
+}

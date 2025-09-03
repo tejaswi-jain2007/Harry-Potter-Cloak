@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harry Potter Invisible Cloak</title>
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Mystery+Quest&display=swap" rel="stylesheet">
+</head>
+<body class="gryffindor">
+  <div class="container parchment-border">
+    <header>
+      <h1>👻 Harry Potter Invisible Cloak 👻</h1>
+    </header>
+    <main>
+      <div id="videoContainer">
+        <img id="videoFeed" src="{{ url_for('video_feed') }}" alt="Invisible Cloak Feed" />
+      </div>
+      <div id="controls">
+        <button id="captureBgBtn">Capture Background</button>
+        <button id="startBtn" disabled>Cast Cloak Spell</button>
+        <button id="stopBtn" disabled>Dispel Cloak</button>
+        <label for="sensitivityRange">Detection Sensitivity:</label>
+        <input type="range" id="sensitivityRange" min="5" max="40" value="15" />
+        <span id="sensitivityValue">15</span>
+        <label for="houseSelector">Hogwarts House:</label>
+        <select id="houseSelector">
+          <option value="gryffindor">Gryffindor</option>
+          <option value="hufflepuff">Hufflepuff</option>
+          <option value="ravenclaw">Ravenclaw</option>
+          <option value="slytherin">Slytherin</option>
+        </select>
+      </div>
+    </main>
+    <footer>
+      <p>Crafted with wizardry & Python © 2025</p>
+    </footer>
+    <audio id="startMagic" src="{{ url_for('static', filename='spell-start.mp3') }}"></audio>
+    <audio id="stopMagic" src="{{ url_for('static', filename='spell-stop.mp3') }}"></audio>
+  </div>
+  <div id="sparkle"></div>
+</body>
+</html>

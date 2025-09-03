@@ -12,6 +12,14 @@ const stopMagic = document.getElementById('stopMagic');
 let cloakRunning = false;
 let bgCaptured = false;
 
+// Show GIF placeholder on page load
+window.addEventListener('DOMContentLoaded', () => {
+  videoFeed.src = '/static/222739.gif';
+  cloakRunning = false;
+  startBtn.disabled = true;
+  stopBtn.disabled = true;
+});
+
 captureBgBtn.addEventListener('click', () => {
   fetch('/capture_background', {method: 'POST'})
     .then(res => res.json())
@@ -40,7 +48,7 @@ startBtn.addEventListener('click', () => {
 
 stopBtn.addEventListener('click', () => {
   if (cloakRunning) {
-    videoFeed.src = '/static/placeholder.jpg'; // Use magical placeholder here!
+    videoFeed.src = '/static/222739.gif'; // Magical placeholder GIF!
     cloakRunning = false;
     startBtn.disabled = false;
     stopBtn.disabled = true;
